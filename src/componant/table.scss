@@ -1,0 +1,36 @@
+.container {
+  .table {
+    padding: 40px !important;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+  }
+  .tabledata {
+    box-shadow: none;
+
+    span {
+      padding: 1px !important;
+      border-radius: 5px !important;
+    }
+    .email {
+      color: #9c9a9a !important;
+    }
+    .iconedit {
+      color: #3b32ed !important;
+    }
+    .icondelete {
+      color: #b3020b !important;
+    }
+  }
+  .table > :not(caption) > * > * {
+    padding: 0.7rem 0.5rem !important;
+  }
+}
+.form {
+  width: 25%;
+  height: auto;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: auto;
+  margin-top: 50px;
+}
