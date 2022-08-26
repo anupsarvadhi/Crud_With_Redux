@@ -27,8 +27,7 @@ export const loadUser = () => {
       .get(`${process.env.REACT_APP_API}`, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization:
-            'Bearer 48af1cd25351a38499abef9068a6168aa0ac9cc85523a78f11b0da2ef26a7764',
+          Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           'Access-Control-Allow-Origin': 'http://localhost:3000',
         },
       })
@@ -47,8 +46,7 @@ export const deleteUser = (id) => {
       .delete(`${process.env.REACT_APP_API}/${id}`, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization:
-            'Bearer 48af1cd25351a38499abef9068a6168aa0ac9cc85523a78f11b0da2ef26a7764',
+          Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           'Access-Control-Allow-Origin': 'http://localhost:3000',
         },
       })
@@ -68,8 +66,7 @@ export const addUser = (user) => {
       .post(`${process.env.REACT_APP_API}`, user, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization:
-            'Bearer 48af1cd25351a38499abef9068a6168aa0ac9cc85523a78f11b0da2ef26a7764',
+          Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           'Access-Control-Allow-Origin': 'http://localhost:3000',
         },
       })
@@ -88,8 +85,7 @@ export const getSingleUser = (id) => {
       .get(`${process.env.REACT_APP_API}/${id}`, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization:
-            'Bearer 48af1cd25351a38499abef9068a6168aa0ac9cc85523a78f11b0da2ef26a7764',
+          Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           'Access-Control-Allow-Origin': 'http://localhost:3000',
         },
       })
@@ -108,8 +104,7 @@ export const updatUser = (user, id) => {
       .put(`${process.env.REACT_APP_API}/${id}`, user, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization:
-            'Bearer 48af1cd25351a38499abef9068a6168aa0ac9cc85523a78f11b0da2ef26a7764',
+          Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
           'Access-Control-Allow-Origin': 'http://localhost:3000',
         },
       })

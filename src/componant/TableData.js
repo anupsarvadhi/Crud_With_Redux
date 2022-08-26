@@ -7,6 +7,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux/es/exports'
 import { useSelector } from 'react-redux/es/exports'
 import { deleteUser, loadUser } from '../redux/Action'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const TableData = () => {
   const navigate = useNavigate()
@@ -18,8 +20,11 @@ const TableData = () => {
     dispetch(loadUser())
   }, [dispetch])
 
-  const deleteFnc = (id) => {
+  const deleteFnc = (id, name) => {
     dispetch(deleteUser(id))
+    toast.success(`${name} Delete SuccsesFully..!`, {
+      position: toast.POSITION.TOP_LEFT,
+    })
   }
 
   const EditFnc = (id) => {
@@ -29,6 +34,7 @@ const TableData = () => {
   return (
     <>
       <div className="container mt-4">
+        <ToastContainer />
         <div className="table col-sm-12">
           <Link to="/adduser">
             <Button variant="primary float-end px-5 py-2 mb-3">Add User</Button>
@@ -81,7 +87,7 @@ const TableData = () => {
                                 window.confirm(
                                   'Are you sure to delete this userdata ?',
                                 )
-                                  ? deleteFnc(item.id)
+                                  ? deleteFnc(item.id, item.name)
                                   : ''
                               }
                             />
